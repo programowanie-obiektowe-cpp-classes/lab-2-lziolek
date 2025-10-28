@@ -10,7 +10,7 @@ public:
     ResourceManager(): resource_(new Resource()) {};
 
     ResourceManager(const ResourceManager& other)
-        : resource_{other.resource_}{}
+        : resource_{new Resource(*other.resource_)}{}
 
     ResourceManager& operator=(const ResourceManager& other)
     {
